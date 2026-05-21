@@ -12,6 +12,7 @@ config(); //process.env
 
 //Create express application
 const app = exp();
+app.set("trust proxy", 1);
 //use cors middleware
 app.use(cors({
   origin: "https://final-blog-app-week-09-10-atp.vercel.app",
