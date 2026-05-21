@@ -70,7 +70,7 @@ function ArticleByID() {
 
     try {
       const res = await axios.patch(
-        `https://final-blog-app.onrender.com/author-api/articles/${id}/status`,
+        `https://final-blogapp-week-09-10-atp.onrender.com/author-api/articles/${id}/status`,
         { isArticleActive: newStatus },
         { withCredentials: true },
       );
