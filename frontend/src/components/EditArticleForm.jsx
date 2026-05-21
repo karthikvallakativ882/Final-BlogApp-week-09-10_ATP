@@ -41,7 +41,7 @@ function EditArticle() {
   const updateArticle = async (data) => {
     console.log(data);
     data.articleId = article._id;
-    let res = await axios.put("https://final-blog-app.onrender.com/author-api/articles", data, { withCredentials: true });
+    let res = await axios.put("https://final-blogapp-week-09-10-atp.onrender.com/author-api/articles", data, { withCredentials: true });
     console.log("res update atricle", res);
     navigate(`/article/${article._id}`, {
       state: res.data.payload,
