@@ -13,7 +13,10 @@ config(); //process.env
 //Create express application
 const app = exp();
 //use cors middleware
-app.use(cors({ origin: ["http://localhost:5173","https://final-blog-app-week-09-10-atp.vercel.app"], credentials: true }));
+app.use(cors({
+  origin: "https://final-blog-app-week-09-10-atp.vercel.app",
+  credentials: true
+}));
 //add body parser middleware
 app.use(exp.json());
 //add cookie parser middleware
