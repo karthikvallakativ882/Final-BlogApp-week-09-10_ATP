@@ -42,7 +42,7 @@ function Register() {
     formData.append("profileImageUrl", profileImageUrl[0]);
     //add image to formData objecte
     try {
-      if (role === "user") {
+      if (role === "USER") {
         //make API req to user-api
         let resObj = await axios.post("https://final-blogapp-week-09-10-atp.onrender.com/user-api/users", formData);
         if (resObj.status === 201) {
@@ -50,7 +50,7 @@ function Register() {
           navigate("/login");
         }
       }
-      if (role === "author") {
+      if (role === "AUTHOR") {
         //make API req to author-api
         //make API req to user-api
         let resObj = await axios.post("https://final-blogapp-week-09-10-atp.onrender.com/author-api/users", formData);
@@ -99,7 +99,7 @@ function Register() {
                   type="radio"
                   {...register("role")}
                   id="user"
-                  value="user"
+                  value="USER"
                   className="accent-violet-600 w-4 h-4"
                 />
                 <span className="text-sm text-stone-700 font-medium">User</span>
@@ -109,7 +109,7 @@ function Register() {
                   type="radio"
                   {...register("role")}
                   id="author"
-                  value="author"
+                  value="AUTHOR"
                   className="accent-violet-600 w-4 h-4"
                 />
                 <span className="text-sm text-stone-700 font-medium">Author</span>
