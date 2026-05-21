@@ -15,7 +15,7 @@ const app = exp();
 app.set("trust proxy", 1);
 //use cors middleware
 app.use(cors({
-  origin: "https://final-blog-app-week-09-10-atp.vercel.app",
+  origin: ["http://localhost:5173","https://final-blog-app-week-09-10-atp.vercel.app"],
   credentials: true
 }));
 //add body parser middleware
